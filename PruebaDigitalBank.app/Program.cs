@@ -13,7 +13,7 @@ builder.Services.AddDbContext<BdPruebaContext>(options =>
 });
 
 // Add repositories and services to the container.
-builder.Services.AddScoped<IGenericRepository<Usuario>, UsuarioRepository>();
+builder.Services.AddScoped<IUsuarioRepository<Usuario>, UsuarioRepository>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 
 var app = builder.Build();

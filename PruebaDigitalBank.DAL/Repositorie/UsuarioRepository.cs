@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace PruebaDigitalBank.DAL.Repositorie
 {
-    public class UsuarioRepository : IGenericRepository<Usuario>
+    public class UsuarioRepository : IUsuarioRepository<Usuario>
     {
         private readonly IDbConnection _db;
 
@@ -23,20 +23,20 @@ namespace PruebaDigitalBank.DAL.Repositorie
 
         public async Task<IEnumerable<Usuario>> GetAllUsuarios()
         {
-            var result = await _db.QueryAsync<Usuario>("SP_CRUD_Usuarios", new { Action = "GetAll" }, commandType: CommandType.StoredProcedure);
+            var result = await _db.QueryAsync<Usuario>("SP_CRUD_Usuarios", new { Option = "SELECT" }, commandType: CommandType.StoredProcedure);
             return result.ToList();
         }
 
         public async Task<Usuario> GetUsuarioById(int id)
         {
-            var result = await _db.QueryAsync<Usuario>("SP_CRUD_Usuarios", new { Action = "GetById", Id = id }, commandType: CommandType.StoredProcedure);
+            var result = await _db.QueryAsync<Usuario>("SP_CRUD_Usuarios", new { Option = "SELECTID", Id = id }, commandType: CommandType.StoredProcedure);
             return result.FirstOrDefault();
         }
 
         public async Task<bool> InsertarUsuario(Usuario usuario)
         {
             var parameters = new DynamicParameters();
-            parameters.Add("@Action", "Insert");
+            parameters.Add("@opcion", "INSERT");
             parameters.Add("@Nombre", usuario.Nombre);
             parameters.Add("@FechaNacimiento", usuario.FechaNacimiento);
             parameters.Add("@Sexo", usuario.Sexo);
@@ -48,7 +48,7 @@ namespace PruebaDigitalBank.DAL.Repositorie
         public async Task<bool> ActualizarUsuario(Usuario usuario)
         {
             var parameters = new DynamicParameters();
-            parameters.Add("@Action", "Update");
+            parameters.Add("@opcion", "UPDATE");
             parameters.Add("@Id", usuario.Id);
             parameters.Add("@Nombre", usuario.Nombre);
             parameters.Add("@FechaNacimiento", usuario.FechaNacimiento);
@@ -61,7 +61,7 @@ namespace PruebaDigitalBank.DAL.Repositorie
         public async Task<bool> EliminarUsuario(int id)
         {
             var parameters = new DynamicParameters();
-            parameters.Add("@Action", "Delete");
+            parameters.Add("@opcion", "DELETE");
             parameters.Add("@Id", id);
 
             var result = await _db.ExecuteAsync("SP_CRUD_Usuarios", parameters, commandType: CommandType.StoredProcedure);

@@ -11,9 +11,9 @@ namespace PruebaDigitalBank.BLL.Service
 
     public class UsuarioService : IUsuarioService
     {
-        private readonly IGenericRepository<Usuario> _usuarioRepository;
+        private readonly IUsuarioRepository<Usuario> _usuarioRepository;
 
-        public UsuarioService(IGenericRepository<Usuario> usuarioRepository)
+        public UsuarioService(IUsuarioRepository<Usuario> usuarioRepository)
         {
             _usuarioRepository = usuarioRepository;
         }
