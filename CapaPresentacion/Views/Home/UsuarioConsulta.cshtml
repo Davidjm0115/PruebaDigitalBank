@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Usuario>
+
+<h1>Usuarios</h1>
+<p>
+    <a asp-action="Crear" class="btn btn-success">Crear nuevo usuario</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Fecha de nacimiento</th>
+            <th>Sexo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td>@usuario.Nombre</td>
+                <td>@usuario.FechaNacimiento</td>
+                <td>@usuario.Sexo</td>
+                <td>
+                    <a asp-action="Detalle" class="btn btn-info" asp-route-id="@usuario.Id">Detalle</a>
+                    <a asp-action="Editar" class="btn btn-warning" asp-route-id="@usuario.Id">Editar</a>
+                    <a asp-action="Eliminar" class="btn btn-danger" asp-route-id="@usuario.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

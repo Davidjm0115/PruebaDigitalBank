@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Usuario
+
+<h1>Editar Usuario</h1>
+<form asp-action="Editar" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Nombre" class="control-label"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="FechaNacimiento" class="control-label"></label>
+        <input asp-for="FechaNacimiento" type="date" class="form-control" />
+        <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Sexo" class="control-label"></label>
+        <select asp-for="Sexo" class="form-control">
+            <option value="0" selected disabled>Elige Sexo</option>
+            <option value="M">M</option>
+            <option value="F">F</option>
+        </select>
+        <span asp-validation-for="Sexo" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </div>
+</form>

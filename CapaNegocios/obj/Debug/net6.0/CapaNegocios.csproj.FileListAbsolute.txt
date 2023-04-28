@@ -1,0 +1,15 @@
+C:\Users\dajum\source\repos\DBankPrueba\CapaNegocios\bin\Debug\net6.0\CapaNegocios.deps.json
+C:\Users\dajum\source\repos\DBankPrueba\CapaNegocios\bin\Debug\net6.0\CapaNegocios.dll
+C:\Users\dajum\source\repos\DBankPrueba\CapaNegocios\bin\Debug\net6.0\CapaNegocios.pdb
+C:\Users\dajum\source\repos\DBankPrueba\CapaNegocios\bin\Debug\net6.0\CapaDatos.dll
+C:\Users\dajum\source\repos\DBankPrueba\CapaNegocios\bin\Debug\net6.0\CapaDatos.pdb
+C:\Users\dajum\source\repos\DBankPrueba\CapaNegocios\obj\Debug\net6.0\CapaNegocios.csproj.AssemblyReference.cache
+C:\Users\dajum\source\repos\DBankPrueba\CapaNegocios\obj\Debug\net6.0\CapaNegocios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dajum\source\repos\DBankPrueba\CapaNegocios\obj\Debug\net6.0\CapaNegocios.AssemblyInfoInputs.cache
+C:\Users\dajum\source\repos\DBankPrueba\CapaNegocios\obj\Debug\net6.0\CapaNegocios.AssemblyInfo.cs
+C:\Users\dajum\source\repos\DBankPrueba\CapaNegocios\obj\Debug\net6.0\CapaNegocios.csproj.CoreCompileInputs.cache
+C:\Users\dajum\source\repos\DBankPrueba\CapaNegocios\obj\Debug\net6.0\CapaNegocios.csproj.CopyComplete
+C:\Users\dajum\source\repos\DBankPrueba\CapaNegocios\obj\Debug\net6.0\CapaNegocios.dll
+C:\Users\dajum\source\repos\DBankPrueba\CapaNegocios\obj\Debug\net6.0\refint\CapaNegocios.dll
+C:\Users\dajum\source\repos\DBankPrueba\CapaNegocios\obj\Debug\net6.0\CapaNegocios.pdb
+C:\Users\dajum\source\repos\DBankPrueba\CapaNegocios\obj\Debug\net6.0\ref\CapaNegocios.dll
